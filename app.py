@@ -23,10 +23,8 @@ input_prompt_diet = """
     If the input contains list of items like fruits or vegetables, you have to always give Indian diet plan and suggest different
     breakfast, lunch, dinner with respect to the given items provided by the user. Exclude extra items apart from input.
     Also if possible provide dish along with the receipes.
-    If the input contains numbers, you have to suggest diet plan for breakfast, lunch, dinner within
-    given number of calorie for the whole day both vegetarian and non-vegetarian.
-    Return the response using markdown.
     Only respond if the image pertains to food items else respond with not appropriate items mentioned.
+    If the input only contains a number(for ex: 727..) then display inappropriate message
     """
 
 input_diet = st.text_area(" Input the list of items that you have at home and get diet plan! OR \
