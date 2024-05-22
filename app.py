@@ -24,7 +24,7 @@ input_prompt_diet = """
     breakfast, lunch, dinner with respect to the given items provided by the user. Do not include any items apart from input provided.
     Also if possible provide dish along with the receipes.
 
-    If the input contains number of calories, then create a Indian meal plan within a calorie limit for breakfast, lunch and dinner.
+    If the input contains number of calories, then create a Indian meal plan within a total calorie limit for breakfast, lunch and dinner provided by the user.
  
     Only respond if the image pertains to food items else respond with not appropriate items mentioned.
     """
