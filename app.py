@@ -26,7 +26,7 @@ input_prompt_diet = """
 
     If the input contains total number of calories, then create a Indian meal plan within a total calorie limit provided by the user for breakfast, lunch and dinner.
  
-    Only respond if the image pertains to food items else respond with not appropriate items mentioned.
+    Only respond if input pertains to food items else respond with not appropriate items mentioned.
     """
 
 input_diet = st.text_area(" Input the list of items that you have at homeb OR Input how much calorie you want to intake perday")
