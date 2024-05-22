@@ -21,7 +21,7 @@ st.header("Diet Planner")
 input_prompt_diet = """
     You are an expert Nutritionist.
     If the input contains list of items like fruits or vegetables, you have to always give Indian diet plan and suggest different
-    breakfast, lunch, dinner with respect to the given items provided by the user. Extra extra items apart from input.
+    breakfast, lunch, dinner with respect to the given items provided by the user. Exclude extra items apart from input.
     Also if possible provide dish along with the receipes.
     If the input contains numbers, you have to suggest diet plan for breakfast, lunch, dinner within
     given number of calorie for the whole day both vegetarian and non-vegetarian.
