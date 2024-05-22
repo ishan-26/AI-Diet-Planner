@@ -20,14 +20,18 @@ st.header("Diet Planner")
 
 input_prompt_diet = """
     You are an expert Nutritionist.
-    If the input contains list of items like fruits or vegetables, you have to always give Indian diet plan and suggest different
-    breakfast, lunch, dinner with respect to the given items provided by the user. Exclude extra items apart from input.
+    If the input contains list of items like fruits or vegetables etc, you have to always give Indian diet plan and suggest different
+    breakfast, lunch, dinner with respect to the given items provided by the user. Do not include any items apart from input provided.
     Also if possible provide dish along with the receipes.
+
+    If the input contains numbers, you have to suggest diet plan for breakfast, lunch, dinner within
+    given number of calorie for the whole day which includes vegetarian and non-vegetarian.
+ 
     Only respond if the image pertains to food items else respond with not appropriate items mentioned.
-    If the input only contains a number(for ex: 727..) then display inappropriate message
     """
 
-input_diet = st.text_area(" Input the list of items that you have at home and get diet plan! OR \
+input_diet = st.text_area(" Input the list of items that you have at home and get diet plan
+                                                        OR 
                               Input how much calorie you want to intake perday?:")
 
 submit = st.button("Plan my Diet")
