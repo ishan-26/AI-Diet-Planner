@@ -15,7 +15,7 @@ def get_response_diet(prompt, input):
     response = model.generate_content([prompt, input])
     return response.text
 
-st.image('D:\Code\Project\Diet planner\logo.jpg', width=70)
+st.image('logo.jpg', width=70)
 st.header("Diet Planner")
 
 input_prompt_diet = """
