@@ -8,9 +8,17 @@ import streamlit as st
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+generation_config = {
+  "temperature": 1,
+  "top_p": 0.95,
+  "top_k": 64,
+  "max_output_tokens": 8192,
+  "response_mime_type": "text/plain",
+}
+
 #Function to load Google Gemini Pro model and get response
 def get_response_diet(prompt, input):
-    model = genai.GenerativeModel(model_name="gemini-1.5-pro",)
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash",generation_config=generation_config,)
     response = model.generate_content([prompt, input])
     return response.text
 
