@@ -14,7 +14,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 def get_response_diet(prompt, input):
  model = genai.GenerativeModel( model_name="gemini-1.5-flash",generation_config=generation_config,)
  response = model.generate_content([prompt, input])
-return response.text
+ return response.text
 
 st.image('logo.jpg', width=70)
 st.header("Diet Planner")
