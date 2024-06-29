@@ -12,7 +12,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 #Function to load Google Gemini Pro model and get response
 def get_response_diet(prompt, input):
- model = genai.GenerativeModel( model_name="gemini-1.5-flash",generation_config=generation_config,)
+ model = genai.GenerativeModel(model_name="gemini-1.5-flash",generation_config=generation_config,)
  response = model.generate_content([prompt, input])
  return response.text
 
@@ -35,7 +35,7 @@ input_diet = st.text_area(" Input the list of items that you have at homeb OR In
 submit = st.button("Plan my Diet")
 
 if submit:
- response = get_response_diet(input_prompt_diet, input_diet)
+ response = get_response_diet(input_prompt_diet,input_diet)
 
  st.subheader("Your Diet:")
  st.write(response)
