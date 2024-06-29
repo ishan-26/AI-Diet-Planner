@@ -30,8 +30,8 @@ input_prompt_diet = """
     Only respond if the input pertains to food items else respond with not appropriate items mentioned.
     """
 
-input_diet = st.text_area(" Input the list of items that you have at home and get diet plan! OR \
-                              Input how much calorie you want to intake perday?:")
+input_diet = st.text_area(" Input the list of items that you have at home and get diet plan \
+                              Input how much calorie you want to intake perday")
 
 submit = st.button("Plan my Diet")
 
