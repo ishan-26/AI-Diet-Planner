@@ -10,7 +10,8 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 #Function to load Google Gemini Pro model and get response
 def get_response_diet(prompt, input):
-    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+    model = genai.GenerativeModel('gemini-pro')
+
     response = model.generate_content([prompt, input])
     return response.text
 
@@ -19,10 +20,12 @@ st.header("Diet Planner")
 
 input_prompt_diet = """
     You are an expert Nutritionist.
-    If the input contains list of items like fruits or vegetables, you have to always give Indian diet plan and suggest different breakfast, lunch, dinner with respect to the given items provided by the user. Do not include extra items apart from input.
+    If the input contains list of items like fruits or vegetables, you have to always give Indian diet plan and suggest different
+    breakfast, lunch, dinner with respect to the given items provided by the user. Do not include extra items apart from input.
     Also if possible provide dish along with the receipes.
 
-    If the input contains numbers, you have to suggest diet plan for breakfast, lunch, dinner within given number of calories for the whole day both vegetarian and non-vegetarian.
+    If the input contains numbers, you have to suggest diet plan for breakfast, lunch, dinner within
+    given number of calorie for the whole day both vegetarian and non-vegetarian.
 
     Only respond if the input pertains to food items else respond with not appropriate items mentioned.
     """
