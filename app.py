@@ -10,7 +10,7 @@ genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Function to load Google Gemini Pro model and get response
 def get_response_diet(prompt, input):
-    model = genai.GenerativeModel(model_name="gemini-1.5-pro")
+    model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
     response = model.generate_content([prompt, input])
     return response.text
 
